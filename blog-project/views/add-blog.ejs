@@ -1,0 +1,24 @@
+<!-- header -->
+<%-include('partials/header.ejs') %>
+
+<form class="add-form" action="/add-blog" method="POST">
+    <div>
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" id="title" required>
+    </div>
+
+    <div>
+        <label for="text">Text:</label><br>
+        <textarea id="text" name="text" rows="5" required></textarea><br>
+    </div>
+
+    <div>
+        <label for="author">Author:</label><br>
+        <input type="text" name="author" id="author" required>
+    </div>
+
+    <button class="add-button" type="submit">Create</button>
+</form>
+
+<!-- footer -->
+<%-include('partials/footer.ejs') %>

@@ -1,0 +1,28 @@
+<!-- header -->
+<%-include('partials/header.ejs') %>
+
+<h1 style="margin-bottom: 50px;">Edit your blog post</h1>
+
+<form class="add-form" action="/edit/<%= blog_post.id %>" method="POST">
+    <div>
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" id="title" value="<%= blog_post.title %>">
+    </div>
+
+    <div>
+        <label for="text">Text:</label><br>
+        <textarea id="text" name="text" rows="5" required><%= blog_post.title %></textarea><br>
+    </div>
+
+    <div>
+        <label for="author">Author:</label><br>
+        <input type="text" name="author" id="author" value="<%= blog_post.author %>">
+    </div>
+        <button class="add-button" type="submit">Update</button>
+    </form>
+    <form action="/delete/<%= blog_post.id %>" method="POST">
+        <button style="margin-top: 20px;" class="delete-button">Delete</button>
+    </form>
+
+<!-- footer -->
+<%-include('partials/footer.ejs') %>

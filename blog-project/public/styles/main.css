@@ -1,0 +1,191 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: Poppins, sans-serif;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6, a {
+    overflow-wrap: break-word;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p, a {
+    font-size: 16px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  button {
+    outline: none;
+    border: none;
+  }
+
+  footer {
+    width: 100%;
+    padding: 22px;
+  }
+
+  header, nav, .nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header {
+    width: 100%;
+    padding: 22px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .nav-item {
+    color: #fff;
+    transition: all .2s ease;
+  }
+
+  .nav-item:hover {
+    color: rgba(255, 255, 255, .5);
+  }
+
+  .container {
+    margin: 200px auto auto auto;
+    width: 100%;
+    max-width: 1280px;
+    height: 100dvh;
+  }
+
+  .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    color: #fff;
+    background-color: #000;
+    transition: all .2s ease;
+    width: fit-content;
+  }
+
+  .add-button:hover {
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+  }
+
+  .no-blog {
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .add-form > div, .add-form > div > input,  .add-form > div > textarea {
+    width: 100%;
+  }
+
+  input, textarea {
+    outline: none;
+    border-width: 1px;
+    padding: 10px;
+    border-color: rgba(0, 0, 0, .2);
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .delete-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
+    padding: 11px 22px;
+    background-color: #fff;
+    width: fit-content;
+    transition: all .2s ease;
+  }
+
+  .delete-button:hover {
+    cursor: pointer;
+    box-shadow: inset 100px 100px 100px rgba(155, 155, 155, 0.3);
+  }
+
+  .home-link {
+    color: #000;
+    font-size: 20px;
+    line-height: 1.4;
+  }

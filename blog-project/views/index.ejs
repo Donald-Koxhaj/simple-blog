@@ -1,0 +1,22 @@
+<!-- header -->
+<%-include('partials/header.ejs') %>
+
+<% if(locals.posts) { %>
+    <h1 style="margin-bottom: 50px;">Here are some Blog Articles for you to read</h1>
+   <% posts.map((item) => { %>
+        <ul>
+            <li>
+                <a class="home-link" href="/edit/<%= item.id %>"> <%= item.title %> </a> 
+            </li>
+        </ul>
+    <% }) %>    
+<% } else {%>
+    <div class="no-blog">
+        <h1>No Blog Articles yet</h1>
+        <h2 style="margin-bottom: 50px;">Ready to post your blog article ?</h2>
+        <a class="add-button" href="/add-blog">Add New</a>
+    </div>
+<% } %>
+
+<!-- footer -->
+<%-include('partials/footer.ejs') %>
